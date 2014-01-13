@@ -1,6 +1,7 @@
-# grunt-sails-linker
+# grunt-file-and-cdn-linker
 
 > Autoinsert script tags (or other filebased tags) in an html file
+This project is a fork of [sails-linker](https://github.com/Zolmeister/grunt-sails-linker).
 
 ## Getting Started
 This plugin requires Grunt `~0.4.x`
@@ -30,7 +31,8 @@ grunt.initConfig({
         startTag: '<!--SCRIPTS-->',
         endTag: '<!--SCRIPTS END-->',
         fileTmpl: '<script src="%s"></script>',
-        appRoot: 'app/'
+        appRoot: 'app/',
+        cdn: false
       },
       files: {
         // Target-specific file lists and/or options go here.
@@ -67,4 +69,10 @@ Default value: `''`
 
 The root of the application. Script links are relative from this folder.
 
+
+#### options.appRoot
+Type: `Boolean`
+Default value: `false`
+
+States whether the tags to insert are cdn adresses
 

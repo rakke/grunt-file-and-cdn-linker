@@ -35,7 +35,8 @@ module.exports = function(grunt) {
           startTag: '<!--SCRIPTS-->',
           endTag: '<!--SCRIPTS END-->',
           fileTmpl: '\n<script src="%s"></script>',
-          appRoot: 'test/'
+          appRoot: 'test/',
+          cdn: false
         },
         files: {
           'test/fixtures/**/*.html': 'test/fixtures/*.js'
